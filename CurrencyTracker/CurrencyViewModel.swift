@@ -13,7 +13,7 @@ class CurrencyViewModel: ObservableObject {
     @Published var rates: [CurrencyRate] = []
 
     func fetchRates() async {
-        guard let url = URL(string: "https://belarusbank.by/api/kursExchange") else { return }
+        guard let url = URL(string: "https://belarusbank.by/api/kursExchange?city=Дятлово") else { return }
 
         do {
             let (data, _) = try await URLSession.shared.data(from: url)

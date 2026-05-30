@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct CurrencyRate: Decodable {
+struct CurrencyRate: Decodable, Identifiable {
+    let id = UUID()
     let name: String
     let rateIn: Double
     let rateOut: Double
